@@ -1,0 +1,30 @@
+// C++ program for the above approach 
+#include <bits/stdc++.h> 
+using namespace std; 
+
+// Function to find two distinct numbers 
+// X and Y s.t. their LCM lies between 
+// L and R and X, Y are minimum possible 
+void answer(int L, int R) 
+{ 
+
+	// Check if 2*L lies in range L, R 
+	if (2 * L <= R) 
+
+		// Print the answer 
+		cout << L << ", "
+			<< 2 * L << "\n"; 
+	else
+		cout << -1; 
+} 
+
+// Driver Code 
+int main() 
+{ 
+	// Given value of ranges 
+	int L = 3, R = 8; 
+
+	// Function call 
+	answer(L, R); 
+	return 0; 
+} 
