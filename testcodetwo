@@ -1,0 +1,35 @@
+# Python3 program to implement 
+# the above approach 
+def maximizedNdigit(n): 
+
+	# If n is divisible by 4 
+	if (n % 4 == 0): 
+		count0s = n // 4
+		count9s = n - n // 4
+	
+	# Otherwise 
+	else: 
+		count0s = n // 4 + 1
+		count9s = n - count0s 
+		count0s -= 1
+	
+	while (count9s): 
+		print('9', end = "") 
+		count9s -= 1
+
+	if (n % 4 != 0): 
+		print('8', end = "") 
+
+	while (count0s): 
+		print('0', end = "") 
+		count0s -= 1
+		
+	print() 
+
+# Driver Code 
+if __name__ == "__main__": 
+
+	n = 5
+	maximizedNdigit(n) 
+
+# This code is contributed by chitranayal 
